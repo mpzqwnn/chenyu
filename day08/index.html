@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>css3选择器</title>
+    <style>
+      .fw {
+        font-weight: bold;
+      }
+      .fs-100 {
+        font-size: 100px;
+      }
+      .fs-14 {
+        font-size: 14px;
+      }
+      .fs-18 {
+        font-size: 18px;
+      }
+      .color-blue {
+        color: blue;
+      }
+      .color-pink {
+        color: pink;
+      }
+      .color-green {
+        color: green;
+      }
+      .color-red {
+        color: red;
+      }
+      .color-orange {
+        color: orange;
+      }
+      .color-orangered {
+        color: orangered;
+      }
+      .color-skyblue {
+        color: skyblue;
+      }
+      .color-brown {
+        color: brown;
+      }
+      .color-purple {
+        color: purple;
+      }
+      a {
+        color: red;
+        text-decoration: none;
+      }
+      #classh1 {
+        color: green;
+      }
+      #classh2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>第一题</h1>
+    <div>
+      <a href="#">我是a链接1</a><a href="#">我是a链接2</a
+      ><a href="#">我是a链接3</a>
+      <h1 id="classh1">我是h1标签</h1>
+      <h2 id="classh2">我是h2标签</h2>
+    </div>
+    <h1>第二题</h1>
+    <div>
+      <p class="fs-14 color-blue">我是一个p标签</p>
+      <p class="fs-18 color-pink">我是一个p标签</p>
+      <p class="fs-14 color-green">我是一个p标签</p>
+      <p class="fs-14 color-red">我是一个p标签</p>
+      <p class="fs-18 color-orange">我是一个p标签</p>
+    </div>
+    <h3>第三题</h3>
+    <div style="font-size: 30px; color: green">
+      我是div里面的文字，字体大小是30px,颜色是绿色。
+    </div>
+    <h1>第四题</h1>
+    <div>
+      <div>
+        <span style="font-size: 100px; color: blue">G</span>
+        <span style="font-size: 100px; color: red">o</span>
+        <span style="font-size: 100px; color: orange">o</span>
+        <span style="font-size: 100px; color: blue">g</span>
+        <span style="font-size: 100px; color: orange">l</span>
+        <span style="font-size: 100px; color: green">e</span>
+      </div>
+      <br />
+      <div>
+        <span class="fs-100 color-blue">G</span>
+        <span class="fs-100 color-red">o</span>
+        <span class="fs-100 color-orange">o</span>
+        <span class="fs-100 color-blue">g</span>
+        <span class="fs-100 color-orange">l</span>
+        <span class="fs-100 color-green">e</span>
+      </div>
+    </div>
+    <h1>第五题</h1>
+    <div>
+      <div>
+        <p style="font-weight: bold">望庐山瀑布</p>
+        <p style="color: green">日照香炉生紫烟，</p>
+        <p style="color: green">遥看瀑布挂前川。</p>
+        <p style="color: green">飞流直下三千尺，</p>
+        <p style="color: green">疑是银河落九天。</p>
+      </div>
+      <br />
+      <div>
+        <p class="fw">望庐山瀑布</p>
+        <p class="color-green">日照香炉生紫烟，</p>
+        <p class="color-green">遥看瀑布挂前川。</p>
+        <p class="color-green">飞流直下三千尺，</p>
+        <p class="color-green">疑是银河落九天。</p>
+      </div>
+    </div>
+    <h1>第六题</h1>
+    <div>
+      <div>
+        <h2 style="color: orangered">水调歌头</h2>
+        <hr />
+        <p style="color: orangered">明白几时有，把酒问青天。</p>
+        <p style="color: orangered">不知天上宫阙，今夕是何年？</p>
+        <p style="color: orangered">我欲乘风归去，又恐琼楼玉宇，</p>
+        <p style="color: orangered">高处不胜寒。</p>
+        <p style="color: orangered">起舞弄清影，何似在人间！</p>
+        <br />
+        <p>转朱阁，低绮户，照无眠。</p>
+        <p>不应有恨，何事长向别时圆？</p>
+        <p>人有悲欢离合，月有阴晴圆缺，</p>
+        <p>此事古难全。</p>
+        <p>但愿人长久，千里共婵娟。</p>
+      </div>
+      <br />
+      <div>
+        <h2 class="color-orangered">水调歌头</h2>
+        <hr />
+        <p class="color-orangered">明白几时有，把酒问青天。</p>
+        <p class="color-orangered">不知天上宫阙，今夕是何年？</p>
+        <p class="color-orangered">我欲乘风归去，又恐琼楼玉宇，</p>
+        <p class="color-orangered">高处不胜寒。</p>
+        <p class="color-orangered">起舞弄清影，何似在人间！</p>
+        <br />
+        <p>转朱阁，低绮户，照无眠。</p>
+        <p>不应有恨，何事长向别时圆？</p>
+        <p>人有悲欢离合，月有阴晴圆缺，</p>
+        <p>此事古难全。</p>
+        <p>但愿人长久，千里共婵娟。</p>
+      </div>
+    </div>
+    <h1>第七题</h1>
+    <div>
+      <div>
+        <h2 style="font-weight: bold">如梦令</h2>
+        <hr />
+        <p style="color: skyblue">昨夜雨疏风骤，浓睡不消残酒。</p>
+        <p style="color: skyblue">试问卷帘人，却道“海棠依旧”。</p>
+        <p style="color: skyblue">“知否？知否？应为绿肥红瘦。”</p>
+        <p>译文</p>
+        <p style="color: skyblue">昨夜雨点稀疏，晚风急猛，我虽然睡了一夜，仍</p>
+        <p style="color: skyblue">有余醉未消。试问卷帘的侍女：海棠花怎么样？</p>
+        <p style="color: skyblue">她说海棠花依然如旧。知道吗？知道吗？应是绿</p>
+        <p style="color: skyblue">叶繁茂，红花凋零。</p>
+      </div>
+      <br />
+      <div>
+        <h2 class="fw">如梦令</h2>
+        <hr />
+        <p class="color-skyblue">昨夜雨疏风骤，浓睡不消残酒。</p>
+        <p class="color-skyblue">试问卷帘人，却道“海棠依旧”。</p>
+        <p class="color-skyblue">“知否？知否？应为绿肥红瘦。”</p>
+        <p>译文</p>
+        <p class="color-skyblue">昨夜雨点稀疏，晚风急猛，我虽然睡了一夜，仍</p>
+        <p class="color-skyblue">有余醉未消。试问卷帘的侍女：海棠花怎么样？</p>
+        <p class="color-skyblue">她说海棠花依然如旧。知道吗？知道吗？应是绿</p>
+        <p class="color-skyblue">叶繁茂，红花凋零。</p>
+      </div>
+    </div>
+    <h1>第八题</h1>
+    <div>
+      <div>
+        <h2 style="color: green; font-weight: bold">忆江南 唐.白居易</h2>
+        <hr />
+        <p style="color: blue">江南好,风景旧曾谙。</p>
+        <p style="color: blue">日出江花红胜火，</p>
+        <p style="color: blue">春来江水绿如蓝，</p>
+        <p style="color: blue">能不忆江南。</p>
+        <h3 style="color: brown; font-weight: bold">作者介绍</h3>
+        <p style="color: blue">
+          白居易(772－846)，字乐天,白居易(772－846) ，字乐天，
+          太原(今属山西)人。唐德宗朝进士，元和三年(808)拜左拾遗，后贬江州(今属江西)司马，移忠州(今属四川)刺史，又为苏州(今属江苏)、同州(今属陕西大荔)刺史。晚居洛阳，自号醉吟先生、香山居士。其诗政治倾向鲜明，重讽喻，尚坦易，为中唐大家。也是早期词人中的佼佼者，所作对后世影响甚大。
+        </p>
+        <h3 style="color: brown; font-weight: bold">注释</h3>
+        <p style="color: blue">
+          (1)据《乐府杂录》，此词又名《谢秋娘》，系唐李德裕为亡姬谢秋娘作。又名《望江南》、
+          《梦江南》等。分单调、双调两体。单调二十七字，双凋五十四字，皆平韵。(2)谙(音安)：熟悉。(3)蓝：蓝草，其叶可制青绿染料。
+        </p>
+        <h3 style="color: brown; font-weight: bold">品评</h3>
+        <p style="color: blue">
+          此词写江南春色，首句“江南好”，以一个既浅切又圆活的“好”字，摄尽江南春色的种种佳处，而作者的赞颂之意与向往之情也尽寓其中。同时，唯因“好”之已甚，方能“忆”之不休，因此，此句又已暗逗结句“能不忆江南”，并与之相关阖。次句“风景旧曾谙”，点明江南风景之“好”，并非得之传闻，而是作者出牧杭州时的亲身体验与亲身感受。这就既落实了“好”字，又照应了“忆”字，不失为勾通一篇意脉的精彩笔墨。三、四两句对江南之“好”进
+          　行形象化的演绎，突出渲染江花、江水红绿相映的明艳色彩，给人以光彩夺目的强烈印象。其中，既有同色间的相互烘托，又有异色间的相互映衬，充分显示了作者善于著色的技巧。篇末，以“能不忆江南”收束全词，既托出身在洛阳的作者对江南春色的无限赞叹与怀念，又造成一种悠远而又深长的韵味，把读者带入余情摇漾的境界中。
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2 class="fw color-green">忆江南 唐.白居易</h2>
+        <hr />
+        <p class="color-blue">江南好,风景旧曾谙。</p>
+        <p class="color-blue">日出江花红胜火，</p>
+        <p class="color-blue">春来江水绿如蓝，</p>
+        <p class="color-blue">能不忆江南。</p>
+        <h3 class="color-brown fw">作者介绍</h3>
+        <p class="color-blue">
+          白居易(772－846)，字乐天,白居易(772－846) ，字乐天，
+          太原(今属山西)人。唐德宗朝进士，元和三年(808)拜左拾遗，后贬江州(今属江西)司马，移忠州(今属四川)刺史，又为苏州(今属江苏)、同州(今属陕西大荔)刺史。晚居洛阳，自号醉吟先生、香山居士。其诗政治倾向鲜明，重讽喻，尚坦易，为中唐大家。也是早期词人中的佼佼者，所作对后世影响甚大。
+        </p>
+        <h3 class="color-brown fw">注释</h3>
+        <p class="color-blue">
+          (1)据《乐府杂录》，此词又名《谢秋娘》，系唐李德裕为亡姬谢秋娘作。又名《望江南》、
+          《梦江南》等。分单调、双调两体。单调二十七字，双凋五十四字，皆平韵。(2)谙(音安)：熟悉。(3)蓝：蓝草，其叶可制青绿染料。
+        </p>
+        <h3 class="color-brown fw">品评</h3>
+        <p class="color-blue">
+          此词写江南春色，首句“江南好”，以一个既浅切又圆活的“好”字，摄尽江南春色的种种佳处，而作者的赞颂之意与向往之情也尽寓其中。同时，唯因“好”之已甚，方能“忆”之不休，因此，此句又已暗逗结句“能不忆江南”，并与之相关阖。次句“风景旧曾谙”，点明江南风景之“好”，并非得之传闻，而是作者出牧杭州时的亲身体验与亲身感受。这就既落实了“好”字，又照应了“忆”字，不失为勾通一篇意脉的精彩笔墨。三、四两句对江南之“好”进
+          　行形象化的演绎，突出渲染江花、江水红绿相映的明艳色彩，给人以光彩夺目的强烈印象。其中，既有同色间的相互烘托，又有异色间的相互映衬，充分显示了作者善于著色的技巧。篇末，以“能不忆江南”收束全词，既托出身在洛阳的作者对江南春色的无限赞叹与怀念，又造成一种悠远而又深长的韵味，把读者带入余情摇漾的境界中。
+        </p>
+      </div>
+    </div>
+    <h1>第九题</h1>
+    <div>
+      <div>
+        <img src="./image/game01.jpg" alt="" />
+        <p style="color: green">
+          开心餐厅，让你可以开心的烹饪美味佳肴，从一个简洁的小餐厅起步，逐步打造自己的餐饮大食代。
+        </p>
+        <p style="color: green">
+          烹饪美食，雇佣好友帮忙，装修个性餐厅，获得顾客美誉。
+        </p>
+        <p style="color: green">
+          步步精心经营，细心打理，我们都能成为餐饮大亨哦。
+        </p>
+        <img src="./image/game02.jpg" alt="" />
+        <h3 style="color: green; font-weight: bold">如何做菜？</h3>
+        <p>
+          1.点击餐厅中的炉灶，打开菜谱，选择自己要做的食物后，进行烹饪。不断点击炉灶，直到食物进入自动烹饪阶段；
+        </p>
+        <p>
+          2.每道菜所需要制作的步骤和烹饪的时间不一样，你可以根据自己的时间和偏好来进行选择，还会有各地特色食物供应哦；
+        </p>
+        <p>3.烹饪完毕的食物要及时端到餐台上，否则过一段时间会腐坏；</p>
+        <p>4.食物放在餐台上后，服务员会自动端给顾客，顾客吃完后会付钱给你。</p>
+        <img src="./image/game03.jpg" alt="" />
+        <h4 style="color: red; font-weight: bold">如何经营餐厅？</h4>
+        <p>
+          1.自己做老板，当大厨，雇佣好友来做服务员为你打工。心情越好的员工效率越高。员工兼职的份数越少，工作的时间越短心情越好；好友间亲密度越高，可雇用的时间越长；
+        </p>
+        <p>
+          2.随着等级的升高，可雇佣的员工、可购买的炉灶、餐台、经营面积都会随之增加；
+        </p>
+        <p>3.餐桌椅的摆放位置也很有讲究，它会影响顾客和服务员行走路程。</p>
+
+        <h4 style="color: red; font-weight: bold">如何吸引顾客？</h4>
+        <p>
+          1.美誉度决定了餐厅的客流量，美誉度高的时候来餐厅的顾客多，美誉度低的时候来餐厅的顾客少；
+        </p>
+        <p>
+          2.如果不需要等待，就能及时享用到食物，顾客就会满意地增加餐厅美誉度；与之相反，如果没有吃到食物就离开的顾客会降低美誉度；
+        </p>
+        <p>
+          3.总而言之，储备充足的食物、及时的服务、足够的餐桌椅是必不可少的！
+        </p>
+        <h4 style="color: red; font-weight: bold">如何和好友互动？</h4>
+        <p>
+          1.不忍眼睁睁看好友餐厅的食物腐坏，那就帮忙端到餐台吧！自己还可以获得经验值奖励；
+        </p>
+        <p>
+          2.仓库里的东西可以赠送给好友，直接拖拽到礼物即可赠送；拖拽到收银即可出售。注意哦，每个级别能收到礼物的总价值是有上限的；
+        </p>
+        <p>
+          3.系统的额外食物奖励可和好友分享，把分享消息发布到开心网动态上，让朋友们一起感受快乐！每天最多可以从5位好友的餐厅领取免费食物，食物将被放入仓库的冷藏室里，可出售给系统，也可以拖到餐台上卖给顾客；
+        </p>
+        <p>
+          4.在好友需要帮助的时候，给予帮忙，当然啦，你也可以给好友捣捣乱、使使坏。作为奖励，你也会获得经验值和现金。
+        </p>
+        <img src="./image/game04.jpg" alt="" />
+        <p style="color: purple">
+          开心餐厅，让你可以开心的烹饪美味佳肴，从一个简洁的小餐厅起步，逐步打造自己的餐饮大食代。
+        </p>
+        <p style="color: purple">
+          烹饪美食，雇佣好友帮忙，装修个性餐厅，获得顾客美誉。
+        </p>
+        <p style="color: purple">
+          步步精心经营，细心打理，我们都能成为餐饮大亨哦。
+        </p>
+      </div>
+      <br />
+      <div>
+        <img src="./image/game01.jpg" alt="" />
+        <p class="color-green">
+          开心餐厅，让你可以开心的烹饪美味佳肴，从一个简洁的小餐厅起步，逐步打造自己的餐饮大食代。
+        </p>
+        <p class="color-green">
+          烹饪美食，雇佣好友帮忙，装修个性餐厅，获得顾客美誉。
+        </p>
+        <p class="color-green">
+          步步精心经营，细心打理，我们都能成为餐饮大亨哦。
+        </p>
+        <img src="./image/game02.jpg" alt="" />
+        <h3 class="color-green fw">如何做菜？</h3>
+        <p>
+          1.点击餐厅中的炉灶，打开菜谱，选择自己要做的食物后，进行烹饪。不断点击炉灶，直到食物进入自动烹饪阶段；
+        </p>
+        <p>
+          2.每道菜所需要制作的步骤和烹饪的时间不一样，你可以根据自己的时间和偏好来进行选择，还会有各地特色食物供应哦；
+        </p>
+        <p>3.烹饪完毕的食物要及时端到餐台上，否则过一段时间会腐坏；</p>
+        <p>4.食物放在餐台上后，服务员会自动端给顾客，顾客吃完后会付钱给你。</p>
+        <img src="./image/game03.jpg" alt="" />
+        <h4 class="color-red fw">如何经营餐厅？</h4>
+        <p>
+          1.自己做老板，当大厨，雇佣好友来做服务员为你打工。心情越好的员工效率越高。员工兼职的份数越少，工作的时间越短心情越好；好友间亲密度越高，可雇用的时间越长；
+        </p>
+        <p>
+          2.随着等级的升高，可雇佣的员工、可购买的炉灶、餐台、经营面积都会随之增加；
+        </p>
+        <p>3.餐桌椅的摆放位置也很有讲究，它会影响顾客和服务员行走路程。</p>
+
+        <h4 class="color-red fw">如何吸引顾客？</h4>
+        <p>
+          1.美誉度决定了餐厅的客流量，美誉度高的时候来餐厅的顾客多，美誉度低的时候来餐厅的顾客少；
+        </p>
+        <p>
+          2.如果不需要等待，就能及时享用到食物，顾客就会满意地增加餐厅美誉度；与之相反，如果没有吃到食物就离开的顾客会降低美誉度；
+        </p>
+        <p>
+          3.总而言之，储备充足的食物、及时的服务、足够的餐桌椅是必不可少的！
+        </p>
+        <h4 class="color-red fw">如何和好友互动？</h4>
+        <p>
+          1.不忍眼睁睁看好友餐厅的食物腐坏，那就帮忙端到餐台吧！自己还可以获得经验值奖励；
+        </p>
+        <p>
+          2.仓库里的东西可以赠送给好友，直接拖拽到礼物即可赠送；拖拽到收银即可出售。注意哦，每个级别能收到礼物的总价值是有上限的；
+        </p>
+        <p>
+          3.系统的额外食物奖励可和好友分享，把分享消息发布到开心网动态上，让朋友们一起感受快乐！每天最多可以从5位好友的餐厅领取免费食物，食物将被放入仓库的冷藏室里，可出售给系统，也可以拖到餐台上卖给顾客；
+        </p>
+        <p>
+          4.在好友需要帮助的时候，给予帮忙，当然啦，你也可以给好友捣捣乱、使使坏。作为奖励，你也会获得经验值和现金。
+        </p>
+        <img src="./image/game04.jpg" alt="" />
+        <p class="color-purple;">
+          开心餐厅，让你可以开心的烹饪美味佳肴，从一个简洁的小餐厅起步，逐步打造自己的餐饮大食代。
+        </p>
+        <p class="color-purple">
+          烹饪美食，雇佣好友帮忙，装修个性餐厅，获得顾客美誉。
+        </p>
+        <p class="color-purple">
+          步步精心经营，细心打理，我们都能成为餐饮大亨哦。
+        </p>
+      </div>
+    </div>
+    <h1>第十题</h1>
+    <div>
+      <img src="./img/manor-1.jpg" alt="" />
+      <h4 style="color: orangered; font-weight: bold">
+        如何犁地、播种和收获？
+      </h4>
+
+      <p style="color: orangered">
+        1.点击耙子<img src="./img/manor-2.jpg" alt="" />，即可在庄园中开垦田地；
+      </p>
+      <p style="color: orangered">
+        2.一开始，你可以开垦数十块的田地；扩充庄园后，可开垦的数量更多；
+      </p>
+      <p style="color: orangered">
+        3.在商店<img
+          src="./img/manor-3.jpg"
+          alt=""
+        />购买种子后，点击庄园中的田地，即可播种；
+      </p>
+      <p style="color: orangered">
+        4.别忘了收获自己的劳动所得哦，枯萎后就颗粒无收了！
+      </p>
+      <p style="color: orangered">
+        5.使用铲子删除庄园里的田地<img src="./img/manor-4.jpg" alt="" />和植物；
+      </p>
+      <p style="color: orangered">
+        6.到达一定级别，可利用拖拉机、播种机 、收割机 ，方便快捷的劳作。
+      </p>
+      <h4 style="color: orangered; font-weight: bold">如何种果树？</h4>
+      <p style="color: orangered">
+        1.商店中购买果树后，点击庄园空地<img
+          src="./img/manor-5.jpg"
+          alt=""
+        />，即可种植；
+      </p>
+      <p style="color: orangered">2.果树结满果实时，一定要记得及时收获哦；</p>
+      <p style="color: orangered">
+        3.幸运的是，果树不会枯萎，收获后的果树，过一段时间后，还会继续结果。
+      </p>
+      <h4 style="color: orangered; font-weight: bold">如何养动物？</h4>
+      <p style="color: orangered">
+        1.点击商店，选择想要饲养的动物后，点击庄园空地，即可饲养动物；
+      </p>
+      <p style="color: orangered">
+        2.动物成熟之后一定要记得收获<img src="./img/manor-6.jpg" alt="" />哦~
+      </p>
+      <p style="color: orangered">
+        3.将动物放入相应的居所后，可以更方便地收获；幸运的话，说不定会有意外的惊喜收获呢！
+      </p>
+      <p style="color: orangered">
+        4.除了商店购买外，还有各种神秘途径可获得动物哦！
+      </p>
+      <h4 style="color: orangered; font-weight: bold">如何装扮自己的庄园？</h4>
+      <p style="color: orangered">
+        1.点击左上角的庄园名称，为自己的庄园起个响当当的名字；
+      </p>
+      <p style="color: orangered">
+        2.在商店 里购买各种喜欢的建筑和装饰，随心所欲进行装饰；
+      </p>
+      <p style="color: orangered">
+        3.向好友们许愿或发布需求<img
+          src="./img/manor-7.jpg"
+          alt=""
+        />，让好友们赠送自己心仪的东西；
+      </p>
+    </div>
+    <br />
+    <div>
+      <img src="./img/manor-1.jpg" alt="" />
+      <h4 cllass="color-orangered fw">如何犁地、播种和收获？</h4>
+
+      <p class="color-orangered">
+        1.点击耙子<img src="./img/manor-2.jpg" alt="" />，即可在庄园中开垦田地；
+      </p>
+      <p class="color-orangered">
+        2.一开始，你可以开垦数十块的田地；扩充庄园后，可开垦的数量更多；
+      </p>
+      <p class="color-orangered">
+        3.在商店<img
+          src="./img/manor-3.jpg"
+          alt=""
+        />购买种子后，点击庄园中的田地，即可播种；
+      </p>
+      <p class="color-orangered">
+        4.别忘了收获自己的劳动所得哦，枯萎后就颗粒无收了！
+      </p>
+      <p class="color-orangered">
+        5.使用铲子删除庄园里的田地<img src="./img/manor-4.jpg" alt="" />和植物；
+      </p>
+      <p class="color-orangered">
+        6.到达一定级别，可利用拖拉机、播种机 、收割机 ，方便快捷的劳作。
+      </p>
+      <h4 cllass="color-orangered fw">如何种果树？</h4>
+      <p class="color-orangered">
+        1.商店中购买果树后，点击庄园空地<img
+          src="./img/manor-5.jpg"
+          alt=""
+        />，即可种植；
+      </p>
+      <p class="color-orangered">2.果树结满果实时，一定要记得及时收获哦；</p>
+      <p class="color-orangered">
+        3.幸运的是，果树不会枯萎，收获后的果树，过一段时间后，还会继续结果。
+      </p>
+      <h4 cllass="color-orangered fw">如何养动物？</h4>
+      <p class="color-orangered">
+        1.点击商店，选择想要饲养的动物后，点击庄园空地，即可饲养动物；
+      </p>
+      <p class="color-orangered">
+        2.动物成熟之后一定要记得收获<img src="./img/manor-6.jpg" alt="" />哦~
+      </p>
+      <p class="color-orangered">
+        3.将动物放入相应的居所后，可以更方便地收获；幸运的话，说不定会有意外的惊喜收获呢！
+      </p>
+      <p class="color-orangered">
+        4.除了商店购买外，还有各种神秘途径可获得动物哦！
+      </p>
+      <h4 cllass="color-orangered fw">如何装扮自己的庄园？</h4>
+      <p class="color-orangered">
+        1.点击左上角的庄园名称，为自己的庄园起个响当当的名字；
+      </p>
+      <p class="color-orangered">
+        2.在商店 里购买各种喜欢的建筑和装饰，随心所欲进行装饰；
+      </p>
+      <p class="color-orangered">
+        3.向好友们许愿或发布需求<img
+          src="./img/manor-7.jpg"
+          alt=""
+        />，让好友们赠送自己心仪的东西；
+      </p>
+    </div>
+  </body>
+</html>
