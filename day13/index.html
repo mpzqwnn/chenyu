@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>属性选择器</title>
+		<style type="text/css">
+			.name{
+				color: red;
+			}
+			.pwd{
+				color: red;
+				background-color: yellow;
+			}
+			input:hover{
+				border: 1px solid red;
+			}
+			input[type="text"]:focus{
+				background-color: orange;
+			}
+			input[type="password"]:focus{
+				background-color: yellow;
+			}
+			.message::after{
+				font-size: 10px;
+				content: "(备注)";
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>第一题</h1>
+		<div class="name">name</div>
+		<div class="pwd">pwd</div>
+		<h1>第二题</h1>
+		用户名: <input type="text" /> <br /><br />
+		密码: <input type="password" />
+		<h1><a href="./index3.html">第三题</a></h1>
+		<h1>第四题</h1>
+		<p class="message">这是一段文字</p>
+		<h1><a href="./index5.html">第五题</a></h1>
+		<h1><a href="./index6.html">第六题</a></h1>
+		<h1>第七题</h1>
+		<p>蓝色，一个 ID 选择器权值为 100，一个类名选择器权值为 10，一个标签选择器权值为 1。所以#father #son为200，而#father中的!important继承为null，其他的权重不足，所以是蓝色</p>
+		<h1>第八题</h1>
+		<p>蓝色，继承为null，只有p的001</p>
+		<h1>第九题</h1>
+		<p>蓝色，继承为null，p .c2的011>div p的002</p>
+		<h1>第十题</h1>
+		<p>红色，div div的002>div的001</p>
+		<h1>第十一题</h1>
+		<p>红色，div div div div div div div div div div div div的012>.me的010</p>
+		<h1>第十二题</h1>
+		<p>绿色，继承为null，div #box3的101>.c1 .c2 div的021</p>
+	</body>
+</html>
