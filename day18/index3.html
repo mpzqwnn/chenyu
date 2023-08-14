@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let height=prompt("请输入身高（m）")
+        let weight=prompt("请输入体重（kg）")
+        if (weight/Math.pow(height,2)<18.5) {
+            alert("过瘦")
+        }else if (weight/Math.pow(height,2)<24) {
+            alert("正常")
+        }else if (weight/Math.pow(height,2)<28) {
+            alert("过胖")
+        }else if (weight/Math.pow(height,2)<32) {
+            alert("肥胖")
+        }else{
+            alert("非常肥胖")
+        }
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>

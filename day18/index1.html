@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sex=prompt("请输入性别（男，女）")
+        let height=prompt("请输入身高（cm）")
+        let weight=prompt("请输入体重（kg）")
+        if (sex="男") {
+            if (weight > ((height - 80) * 0.7)*0.95&&weight < ((height - 80) * 0.7)*1.05) {
+                alert("体重正常")
+            }else if (weight > ((height - 80) * 0.7)) {
+                alert("该锻炼身体减肥了哦。P.S.输入非数字字符对应值默认为0")
+            }else{
+                alert("太瘦了，要多补充营养哦。P.S.输入非数字字符对应值默认为0")
+            }
+        }else if(sex="女"){
+            if (weight > ((height - 70) * 0.6)*0.95&&weight < ((height - 70) * 0.6)*1.05) {
+                alert("体重正常")
+            }else if (weight > ((height - 70) * 0.6)) {
+                alert("该锻炼身体减肥了哦。P.S.输入非数字字符对应值默认为0")
+            }else{
+                alert("太瘦了，要多补充营养哦。P.S.输入非数字字符对应值默认为0")
+            }
+        }else{
+            alert("请输入正确性别")
+        }
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>

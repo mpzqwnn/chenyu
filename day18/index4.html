@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num =prompt("请输入三位数")
+        if (num.length==3&&!isNaN(Number(num))) {
+            let sum=0
+            for (let index = 0; index < num.length; index++) {
+                sum+=Math.pow(Number(num[index]),3)
+            }
+            if (sum==Number(num)) {
+                alert(num+"是水仙花数")
+            }else{
+                alert(num+"不是水仙花数")
+            }
+        }else{
+            alert(num+"请输入正确的三位数")
+        }
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>

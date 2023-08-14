@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1230px;
+            background-color: rgb(233, 233, 233);
+        }
+        .title{
+            height: 56px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 56px;
+        }
+        .products{
+            margin: 0 auto;
+        }
+        .item{
+            float: left;
+            width: 300px;
+            height: 400px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: chartreuse;
+        }
+        .item:first-child{
+            width: 610px;
+            background-color: blue;
+        }
+        .item:nth-child(3),
+        .item:last-child{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="title container">
+        <div>精品手机</div>
+    </div>
+    <div class="products container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>
