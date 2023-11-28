@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url("img3/skin1.jpg");
+      }
+      .button{
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 850px;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0.651);
+      }
+      img {
+        margin-top: 3px;
+        margin-left: 50px;
+        float: left;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="button">
+        <img onclick="Click(0)" src="./img3/skin1.jpg" alt="" />
+        <img onclick="Click(1)" src="./img3/skin2.jpg" alt="" />
+        <img onclick="Click(2)" src="./img3/skin3.jpg" alt="" />
+        <img onclick="Click(3)" src="./img3/skin4.jpg" alt="" />
+      </div>
+    <script>
+        var img = document.getElementsByTagName("img")
+        function Click(params) {
+            document.body.style.background="url("+img[params].src+")"
+        }
+    </script>
+  </body>
+</html>

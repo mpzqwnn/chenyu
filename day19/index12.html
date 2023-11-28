@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Arr =[4, 11, 6, 2, 12, 9, 3, 1, 10, 8, 5, 7]
+        for (let i = 0; i < Arr.length; i++) {
+            for (let j = i+1; j < Arr.length; j++) {
+                if (Arr[i]<Arr[j]) {
+                    let a=Arr[i]
+                    Arr.splice(i,1,Arr[j])
+                    Arr.splice(j,1,a)
+                }
+            }
+        }
+        console.log(Arr)
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>

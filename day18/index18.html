@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let month =prompt("请输入月份")
+        if (!isNaN(Number(month))&&month%1==0&&month>0&&month<13) {
+            if (month<3||month==12) {
+                alert("冬季")
+            }else if (month<6) {
+                alert("春季")
+            }else if (month<9) {
+                alert("夏季")
+            }else if (month<11) {
+                alert("秋季")
+            }
+        }else{
+            alert("数字有误")
+        }
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>

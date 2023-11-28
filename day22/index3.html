@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="one">1</li>
+      <li class="two">2</li>
+      <li class="three">3</li>
+      <li class="four">4</li>
+    </ul>
+    <script>
+      function getsiblings(obj) {
+        var a = [];
+        var p = obj.parentNode.children;
+        var pl = p.length;
+        for (var i = 0; i < pl; i++) {
+          if (p[i] !== obj) {
+            a.push(p[i]);
+          }
+        }
+        return a;
+      }
+      var li = document.getElementsByClassName("two")[0];
+      // 其他兄弟元素
+      var lis = new getsiblings(li);
+      console.log(lis);
+    </script>
+  </body>
+</html>

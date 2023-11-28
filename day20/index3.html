@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function prime(num) {
+            let p =true
+            for (let index = 2; index < num; index++) {
+                if (num%index==0) {
+                    p=!p
+                    break
+                }
+            }
+            return p
+        }
+        let num =Number(prompt("请输入数字"))
+        if (!isNaN(num)) {
+            console.log(prime(num))
+        }else{
+            console.log("请输入数字")
+        }
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+</body>
+</html>

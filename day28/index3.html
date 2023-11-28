@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        margin: 0 auto;
+        width: 150px;
+        background-color: rgba(224, 224, 224, 0.285);
+        border: 1px solid black;
+        border-radius: 2%;
+      }
+      .option {
+        margin-top: 10%;
+      }
+      a {
+        text-decoration: none;
+        margin-left: 20%;
+        color: cyan;
+      }
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <div class="option">
+        <input type="checkbox" name="" id="control" /><span id="text">全选</span
+        ><a href="#">反选</a>
+      </div>
+      <hr />
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(0)"
+        />选项（一）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(1)"
+        />选项（二）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(2)"
+        />选项（三）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(3)"
+        />选项（四）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(4)"
+        />选项（五）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(5)"
+        />选项（六）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(6)"
+        />选项（七）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(7)"
+        />选项（八）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(8)"
+        />选项（九）
+      </div>
+      <div class="option">
+        <input
+          type="checkbox"
+          name=""
+          class="Options"
+          onclick="check(9)"
+        />选项（十）
+      </div>
+      <br />
+      <script>
+        var control = document.getElementById("control");
+        var a = document.getElementsByTagName("a")[0];
+        var text = document.getElementById("text");
+        var options = document.getElementsByClassName("Options");
+        var Check = 0;
+        function check(num) {
+          if (options[num].checked) {
+            Check++;
+          } else {
+            Check--;
+          }
+          if (Check == 10) {
+            control.checked = true;
+          } else {
+            control.checked = false;
+          }
+        }
+        control.onclick = function () {
+          if (control.checked) {
+            for (let index = 0; index < options.length; index++) {
+              options[index].checked = true;
+            }
+          } else {
+            for (let index = 0; index < options.length; index++) {
+              options[index].checked = false;
+            }
+          }
+        };
+        a.onclick = function () {
+          for (let index = 0; index < options.length; index++) {
+            options[index].checked = !options[index].checked;
+            if (options[index].checked) {
+              Check++;
+            } else {
+              Check--;
+            }
+          }
+          if (Check == 10) {
+            control.checked = true;
+          } else {
+            control.checked = false;
+          }
+        };
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .carousel {
+        width: 650px;
+        height: 360px;
+        border: 1px solid #000;
+        margin: 50px auto;
+        position: relative;
+      }
+      .carousel ul {
+        list-style: none;
+      }
+      .carousel ul li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* 透明度都是0 */
+        opacity: 0;
+        transition: opacity 1s ease 0s;
+      }
+      /* 只有第一张透明度是1 */
+      .carousel ul li:first-child {
+        opacity: 1;
+      }
+      .carousel .leftbtn {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        margin-top: -25px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(28, 180, 226);
+        border-radius: 50%;
+      }
+      .carousel .rightbtn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -25px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(28, 180, 226);
+        border-radius: 50%;
+      }
+      a{
+        line-height: 50px;
+        text-align:center;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <ul id="list">
+        <li><img src="images/beijing/0.jpg" alt="" /></li>
+        <li><img src="images/beijing/1.jpg" alt="" /></li>
+        <li><img src="images/beijing/2.jpg" alt="" /></li>
+        <li><img src="images/beijing/3.jpg" alt="" /></li>
+        <li><img src="images/beijing/4.jpg" alt="" /></li>
+      </ul>
+      <a href="javascript:;" class="leftbtn" id="leftbtn">&lt;</a>
+      <a href="javascript:;" class="rightbtn" id="rightbtn">&gt;</a>
+    </div>
+    <script>
+      var li = document.getElementsByTagName("li");
+      var leftbtn = document.getElementById("leftbtn");
+      var rightbtn = document.getElementById("rightbtn");
+      var f=true
+      var l = false;
+      var r = false;
+      leftbtn.onclick=function (){
+        if (l) {
+          return;
+        }
+        l = true;
+        if (f) {
+                li[1].style.opacity=1
+                li[0].style.opacity=0
+                f=false
+        }
+            if (li[0].style.opacity==1) {
+                li[1].style.opacity=1
+                li[0].style.opacity=0
+            }else if (li[1].style.opacity==1) {
+                li[2].style.opacity=1
+                li[1].style.opacity=0
+            }else if (li[2].style.opacity==1) {
+                li[3].style.opacity=1
+                li[2].style.opacity=0
+            }else if (li[3].style.opacity==1) {
+                li[4].style.opacity=1
+                li[3].style.opacity=0
+            }else{
+                li[4].style.opacity=0
+                li[0].style.opacity=1
+            }
+        
+        setTimeout(() => {
+            l=false   
+        }, 500);
+      }
+      rightbtn.onclick=function (){
+        if (r) {
+          return;
+        }
+        r = true;
+        if (li[1].style.opacity==1) {
+                li[0].style.opacity=1
+                li[1].style.opacity=0
+            }else if (li[2].style.opacity==1) {
+                li[1].style.opacity=1
+                li[2].style.opacity=0
+            }else if (li[3].style.opacity==1) {
+                li[2].style.opacity=1
+                li[3].style.opacity=0
+            }else if (li[4].style.opacity==1) {
+                li[3].style.opacity=1
+                li[4].style.opacity=0
+            }else{
+                li[0].style.opacity=0
+                li[4].style.opacity=1
+            }
+        setTimeout(() => {
+            r = false;
+          }, 500);
+      }
+    </script>
+  </body>
+</html>

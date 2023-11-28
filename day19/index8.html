@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Arr = [
+        "吕布",
+        "赵云",
+        "关羽",
+        "典韦",
+        "赵云",
+        "黄忠",
+        "关羽",
+        "马超",
+        "张飞",
+        "黄忠",
+      ];
+      for (let index = 0; index < Arr.length; index++) {
+        for (let j = index+1; j < Arr.length; j++) {
+          if (Arr[j] == Arr[index]) {
+            Arr.splice(j, 1);
+            break
+          }
+        }
+      }
+      console.log(Arr);
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+  </body>
+</html>

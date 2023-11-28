@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>行数</span><input type="text" /><span>列数</span
+    ><input type="text" /><button onclick="Create()">生成表格</button>
+    <table border="1"></table>
+    <script>
+      var table = document.getElementsByTagName("table")[0];
+      function Create() {
+        var hang = Number(document.getElementsByTagName("input")[0].value);
+        var lie = Number(document.getElementsByTagName("input")[1].value);
+        if (hang<=50&&lie<=50&&!isNaN(hang)&&!isNaN(lie)&&hang>1&&lie>1) {
+            table.innerHTML = "";
+        for (let i = 0; i < hang; i++) {
+          var tr = document.createElement("tr");
+          for (let j = 0; j < lie; j++) {
+            var td = document.createElement("td");
+            td.style.backgroundColor =
+              "rgb(" +
+              Math.floor(Math.random() * 256) +
+              "," +
+              Math.floor(Math.random() * 256) +
+              "," +
+              Math.floor(Math.random() * 256) +
+              ")";
+              td.style.textAlign="center"
+            var num = Math.floor(Math.random() * 100);
+            td.innerHTML = num;
+            tr.appendChild(td);
+          }
+          table.appendChild(tr);
+        }
+        }else if (document.getElementsByTagName("input")[0].value=="") {
+            alert("请输入表格行数")
+        }else if (document.getElementsByTagName("input")[1].value=="") {
+            alert("请输入表格列数")
+        }else{
+            alert("输入格式不正确")
+        }
+      }
+    </script>
+  </body>
+</html>

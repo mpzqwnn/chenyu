@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8" />
+		<title>onchange()</title>
+		<style type="text/css">
+			#div {
+				width: 300px;
+				height: 300px;
+				border: 2px solid gray;
+				margin: 100px 0 0 200px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div>
+			<span>请选择您喜欢的颜色:</span>
+			<select id="color">
+				<option value="0">请选择</option>
+				<option value="yellow">黄色</option>
+				<option value="orange">橘色</option>
+				<option value="pink">粉色</option>
+				<option value="purple">紫色</option>
+			</select>
+		</div>
+		<div id="div">我是div</div>
+        <script type="text/javascript">
+			var select =document.getElementById("color")
+            var div =document.getElementById("div")
+            select.onchange=function (){
+                div.style.backgroundColor=select.value
+            }
+		</script>
+	</body>
+</html>

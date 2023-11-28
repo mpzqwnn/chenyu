@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">字数限制在30字以内，您还可以输入30字</div>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <script>
+        var div =document.getElementById("a")
+        var text =document.getElementById("text")
+        text.oninput=function(){
+            if (this.value.length<=30) {
+                div.innerText = "字数限制在30字以内，您还可以输入"+(30-this.value.length)+"字"
+            }else{
+                div.innerText = "字数限制在30字以内，您已超出"+(this.value.length-30)+"字"
+            }
+        }
+    </script>
+</body>
+</html>

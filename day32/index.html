@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div > img {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>第一题（在控制台）</h1>
+    <h1>第二题</h1>
+    <div id="box"></div>
+    <script>
+      var People = function (name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+      };
+      People.prototype.introdunce = function () {};
+      var Student = function (name, age, sex, hobby) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.hobby = hobby;
+      };
+      Student.prototype = new People();
+      Student.prototype.introdunce = function () {};
+      var Teacher = function (name, age, sex, rank, salary) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.rank = rank;
+        this.salary = salary;
+      };
+      Teacher.prototype = new People();
+      Teacher.prototype.introdunce = function () {
+        console.log(
+          "我是" +
+            this.name +
+            "老师, 性别" +
+            this.sex +
+            ", " +
+            this.age +
+            "岁, 现担任" +
+            this.rank +
+            "一职, 工资到手" +
+            this.salary +
+            ", 我很幸福"
+        );
+      };
+      var Pupil = function (name, age, sex, hobby, birthday) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.hobby = hobby;
+        this.birthday = birthday;
+      };
+      Pupil.prototype = new Student();
+      Pupil.prototype.introdunce = function () {
+        console.log(
+          "您好, 我叫" +
+            this.name +
+            ", 是一个" +
+            this.sex +
+            "生, 今年" +
+            this.age +
+            "岁了, 喜欢" +
+            this.hobby +
+            ", " +
+            this.birthday +
+            "是我的生日"
+        );
+      };
+      var Undergraduate = function (
+        name,
+        age,
+        sex,
+        hobby,
+        major,
+        school,
+        loverName
+      ) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.hobby = hobby;
+        this.major = major;
+        this.school = school;
+        this.loverName = loverName;
+      };
+      Undergraduate.prototype = new Student();
+      Undergraduate.prototype.introdunce = function () {
+        console.log(
+          "你好, 我的姓名叫" +
+            this.name +
+            ", 今年" +
+            this.age +
+            ", 性别" +
+            this.sex +
+            ", 就读于" +
+            this.school +
+            ", " +
+            this.major +
+            ", 爱好" +
+            this.hobby +
+            ", 我的" +
+            (this.sex == "男" ? "女" : "男") +
+            "朋友叫" +
+            this.loverName
+        );
+      };
+      var xiaoming = new Pupil("小明", 5, "男", "看《奥特曼》", "2016年4月1日");
+      xiaoming.introdunce();
+      var xiaohong = new Pupil(
+        "小红",
+        4,
+        "女生",
+        "看《喜洋洋与灰太狼》",
+        "2017年6月2日"
+      );
+      xiaohong.introdunce();
+      var lilei = new Undergraduate(
+        "李雷",
+        "18",
+        "男",
+        "哈尔滨工业大学",
+        "日语专业",
+        "看电影",
+        "韩梅梅"
+      );
+      lilei.introdunce();
+      var hanmeimei = new Undergraduate(
+        "韩梅梅",
+        "21",
+        "女",
+        "海南大学",
+        "土木工程",
+        "钓鱼",
+        "李雷"
+      );
+      hanmeimei.introdunce();
+      var zhangsanqiang = new Teacher("张三强", "男", "53", "系主任", "1800");
+      zhangsanqiang.introdunce();
+
+
+
+      
+      var Traffic = document.querySelector("div");
+      var traffic = function (color, dom) {
+        this.color = 1;
+        this.dom = null;
+        this.init();
+      };
+      traffic.prototype.init = function () {
+        this.dom = document.createElement("img");
+        this.dom.src = "./img/" + this.color + ".jpg";
+        Traffic.appendChild(this.dom);
+        this.click();
+      };
+      traffic.prototype.click = function () {
+        var that = this;
+        this.dom.onclick = function () {
+          that.changeColor();
+        };
+      };
+      traffic.prototype.changeColor = function () {
+        this.color++;
+        if (this.color == 4) {
+          this.color = 1;
+        }
+        this.dom.src = "./img/" + this.color + ".jpg";
+      };
+      for (let index = 0; index < 100; index++) {
+        new traffic();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="code"></span> <button onclick="randomStr()">看不清</button>
+    <script>
+      var button = document.querySelector("button");
+      var span = document.querySelector("span");
+      var a = "";
+      var x = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+      for (let i = 0; i < 4; i++) {
+        a = a + x[parseInt(Math.random() * x.length)];
+      }
+      span.innerHTML = a;
+      button.onclick = function () {
+        var a = "";
+        var x =
+          "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        for (let i = 0; i < 4; i++) {
+          a = a + x[parseInt(Math.random() * x.length)];
+        }
+        span.innerHTML = a;
+      };
+    </script>
+  </body>
+</html>

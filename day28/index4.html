@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .carousel {
+        width: 510px;
+        height: 510px;
+        border: 5px solid yellow;
+        border-radius: 1%;
+        margin: 50px auto;
+        position: relative;
+      }
+
+      .carousel ul {
+        list-style: none;
+      }
+
+      .carousel ul li {
+        position: absolute;
+        margin: 0 auto;
+        top: 5px;
+        left: 5px;
+        /* 透明度都是0 */
+        opacity: 0;
+      }
+
+      /* 只有第一张透明度是1 */
+      .carousel ul li:first-child {
+        opacity: 1;
+      }
+
+      .Img {
+        width: 500px;
+        height: 500px;
+      }
+      .button {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+      }
+      .hover{
+        border: 5px solid yellow;
+        border-radius: 1%;
+      }
+      .Button {
+        margin: 0 auto;
+        width: 600px;
+        height: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="carousel">
+      <ul id="list">
+        <li><img class="Img" src="img2/1.jpg" alt="" /></li>
+        <li><img class="Img" src="img2/2.jpg" alt="" /></li>
+        <li><img class="Img" src="img2/3.jpg" alt="" /></li>
+        <li><img class="Img" src="img2/4.jpg" alt="" /></li>
+        <li><img class="Img" src="img2/5.jpg" alt="" /></li>
+      </ul>
+    </div>
+    <div class="Button">
+      <img onmouseover="over(0)" class="button hover" src="img2/1.jpg" alt="" />
+      <img onmouseover="over(1)" class="button" src="img2/2.jpg" alt="" />
+      <img onmouseover="over(2)" class="button" src="img2/3.jpg" alt="" />
+      <img onmouseover="over(3)" class="button" src="img2/4.jpg" alt="" />
+      <img onmouseover="over(4)" class="button" src="img2/5.jpg" alt="" />
+    </div>
+  </body>
+  <script>
+    var img=document.getElementsByTagName("li")
+    var button =document.getElementsByClassName("button")
+    function over(num) {
+        for (let index = 0; index < button.length; index++) {
+            if (num==index) {
+                img[index].style.opacity=1
+                button[index].className="button hover"
+            }else{
+                img[index].style.opacity=0
+                button[index].className="button"
+            }
+        }
+    }
+  </script>
+</html>

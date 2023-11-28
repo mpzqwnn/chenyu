@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0 auto;
+      }
+
+      td,
+      th {
+        padding: 0;
+      }
+
+      .pure-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: show;
+        border: 1px solid #cbcbcb;
+      }
+
+      .pure-table caption {
+        color: #000;
+        font: italic 85%/1 arial, sans-serif;
+        padding: 1em 0;
+        text-align: center;
+      }
+
+      .pure-table td,
+      .pure-table th {
+        border-left: 1px solid #cbcbcb;
+        border-width: 0 0 0 1px;
+        font-size: inherit;
+        margin: 0;
+        overflow: visible;
+        padding: 0.5em 1em;
+      }
+
+      .pure-table thead {
+        background-color: #e0e0e0;
+        color: #000;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      .pure-table td {
+        background-color: transparent;
+      }
+      .pure-table-horizontal td,
+      .pure-table-horizontal th {
+        border-width: 0 0 1px 0;
+        border-bottom: 1px solid #cbcbcb;
+      }
+
+      .pure-table-horizontal tbody > tr:last-child > td {
+        border-bottom-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>第一题</h1>
+    <div></div>
+    <h2>第二题</h2>
+    <table class="pure-table pure-table-horizontal">
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>身高</th>
+        <th>体重</th>
+        <th>爱好</th>
+      </tr>
+    </table>
+    <script>
+      var obj1 = {
+        a: 1,
+        b: 2,
+        c: [
+          33,
+          44,
+          {
+            m: 55,
+            n: 66,
+            p: [77, 88],
+          },
+        ],
+      };
+      function deepClone(obj) {
+        var obj2 = {};
+        for (var key in obj) {
+          // 如果是对象，就递归调用
+          if (typeof obj[key] === "object") {
+            obj2[key] = deepClone(obj[key]);
+          } else {
+            obj2[key] = obj[key];
+          }
+        }
+        return obj2;
+      }
+      var obj2 = deepClone(obj1);
+      console.log(obj2)
+      document.querySelector("div").innerHTML = "控制台";
+      var text = [
+        {
+          name: "范剑",
+          age: 21,
+          height: 175,
+          weight: 66,
+          hobby: "习惯性加班",
+        },
+        {
+          name: "庞光",
+          age: 19,
+          height: 160,
+          weight: 80,
+          hobby: "凌晨夜跑",
+        },
+        {
+          name: "郑再镐",
+          age: 30,
+          height: 150,
+          weight: 90,
+          hobby: "看美女",
+        },
+        {
+          name: "朴仁猛",
+          age: 44,
+          height: 171,
+          weight: 74,
+          hobby: "大保健",
+        },
+        {
+          name: "杜子腾",
+          age: 35,
+          height: 179,
+          weight: 69,
+          hobby: "吃大肠刺身",
+        },
+      ];
+      var table=document.querySelector("table")
+      for (let i = 0; i < text.length; i++) {
+        var tr=document.createElement("tr")
+        for (var key in text[i]) {
+          var td=document.createElement("td")
+          td.innerHTML=text[i][key]
+          tr.appendChild(td)
+        }
+        table.appendChild(tr)
+      }
+    </script>
+  </body>
+</html>

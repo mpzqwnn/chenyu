@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var min = 0;
+      var max = 40;
+      var randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+      let guess
+      for (let index = 1; index < 6; index++) {
+        guess=prompt("你来猜？输入0-40之间的数字")
+        if (randomInt>guess) {
+            alert("你猜小了，还有"+(5-index)+"次机会")
+        }else if (randomInt<guess) {
+            alert("你猜大了，还有"+(5-index)+"次机会")
+        }else if (randomInt==guess) {
+            alert("你猜对了，还有"+(5-index)+"次机会")
+            break
+        }
+      }
+      alert("这个数字是："+randomInt)
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+  </body>
+</html>

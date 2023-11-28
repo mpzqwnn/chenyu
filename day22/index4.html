@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="mytable" border="1"></table>
+    <script>
+      let table = document.getElementById("mytable");
+      function create(num) {
+        let tr = document.createElement("tr");
+        let td = document.createElement("td");
+        for (let index = 1; index <= num; index++) {
+          td.innerText = index+"*"+num+"="+(index*num);
+          tr.appendChild(td);
+          td = document.createElement("td");
+        }
+		return tr
+      }
+      for (let index = 1; index <= 9; index++) {
+        table.appendChild(create(index));
+      }
+    </script>
+</body>
+</html>

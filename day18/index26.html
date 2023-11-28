@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let account = "admin";
+      let password = "admin123";
+      let login = true;
+      let a;
+      let p;
+      while (login) {
+        a = prompt("请输入账号");
+        p = prompt("请输入密码");
+        if (account == a && password == p) {
+          alert("恭喜, 登录成功!");
+          login = !login;
+        } else {
+          alert("对不起, 用户名或密码不正确!");
+        }
+      }
+    </script>
+    <h1><a href="./index.html">返回</a></h1>
+  </body>
+</html>

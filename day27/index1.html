@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 1000px;
+        height: 130px;
+        border: 1px solid #000;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      .box ul {
+        list-style: none;
+        /* 设置大一点，这样li才能浮动 */
+        width: 5000px;
+        position: relative;
+      }
+      .box ul li {
+        float: left;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="box">
+      <ul id="list">
+        <li><img src="images/number/0.png" alt="" /></li>
+        <li><img src="images/number/1.png" alt="" /></li>
+        <li><img src="images/number/2.png" alt="" /></li>
+        <li><img src="images/number/3.png" alt="" /></li>
+        <li><img src="images/number/4.png" alt="" /></li>
+        <li><img src="images/number/5.png" alt="" /></li>
+      </ul>
+    </div>
+    <script>
+      var list = document.getElementById("list");
+      list.innerHTML += list.innerHTML;
+      var left = 0;
+      setInterval(function () {
+        if (left === -1260) {
+          left = 0;
+        }
+        left -= 5;
+        list.style.left = left + "px";
+      }, 10);
+    </script>
+  </body>
+</html>

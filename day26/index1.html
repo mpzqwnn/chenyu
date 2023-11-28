@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      b {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1617008568.53329550.jpg"
+      alt=""
+    />
+    <h1>距离 小米11 ultra 开抢, 还有 <b>100</b> 秒!!!</h1>
+    <script>
+      var time;
+      var timer = setInterval(function () {
+        time = document.querySelector("b");
+        if (Number(time.innerHTML) > 10) {
+          time.innerHTML = "0" + (Number(time.innerHTML) - 1);
+        } else if (Number(time.innerHTML) > 0) {
+          time.innerHTML = "00" + (Number(time.innerHTML) - 1);
+        } else {
+          var text = document.querySelector("h1");
+          alert("对不起，已经售完了o(╥﹏╥)o")
+          text.innerHTML = "对不起，已经售完了o(╥﹏╥)o";
+          clearInterval(timer);
+        }
+      }, 10);
+    </script>
+  </body>
+</html>
